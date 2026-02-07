@@ -1,1 +1,1 @@
-console.log('Kuboo site carregado corretamente');
+console.log('Kuboo v2 carregado');
