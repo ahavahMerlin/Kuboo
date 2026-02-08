@@ -31,8 +31,9 @@ body {
   left: 0;
   width: var(--largura-esquerda);
   height: 100vh;
-  background: url("./assets/images/kubo7.jpg") center center / cover no-repeat;
-  z-index: 10;
+  /* O segredo está no "../" antes de images */
+  background: url("../images/kubo7.jpg") center center / cover no-repeat;
+  z-index: -1; /* Fica atrás do conteúdo */
 }
 
 /* ===============================
