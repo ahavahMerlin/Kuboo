@@ -1,5 +1,5 @@
 /* ===============================
-   VARIÁVEIS
+   VARIÁVEIS E RESET
 ================================ */
 :root {
   --primary: #0a3cff;
@@ -7,514 +7,166 @@
   --dark: #0f172a;
   --gray: #475569;
   --light: #f8fafc;
+  --largura-esquerda: 35%; /* Controla a largura da foto aqui */
 }
 
-/* ===============================
-   RESET
-================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===============================
-   BODY + FUNDO ESQUERDO
-================================ */
-html, body {
-  min-height: 100%;
-}
-
 body {
   font-family: 'Inter', sans-serif;
-  color: var(--dark);
-  line-height: 1.6;
-  background: #f8fafc;
-
-  /* espaço para a imagem da esquerda */
-  margin-left: 35%;
-}
-
-/* IMAGEM FIXA À ESQUERDA */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 35%;
-  height: 100vh;
-  background: url("../images/kubo7.jpg") center center / cover no-repeat;
-  z-index: -1;
-}
-
-/* ===============================
-   CONTAINER
-================================ */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* ===============================
-   HEADER PREMIUM
-================================ */
-.header {
-  background: linear-gradient(90deg, #0a2a5e, #143c8a);
-  padding: 16px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* MARCA */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.logo {
-  max-height: 60px;
-  width: auto;
-}
-
-/* TEXTO DA MARCA */
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.brand-main {
-  font-size: 2.4rem;
-  font-weight: 900;
-  color: #ffffff;
-}
-
-.brand-sub {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #c7d7ff;
-}
-
-/* BOTÃO WHATSAPP HEADER */
-.btn-header {
-  background: #25d366;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-header:hover {
-  background: #1ebe5d;
-}
-
-/* ===============================
-   HERO
-================================ */
-.hero {
-  background: rgba(255,255,255,0.95);
-  margin: 40px auto;
-  padding: 80px 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-.hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: var(--gray);
-  margin-bottom: 30px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-/* ===============================
-   BOTÕES
-================================ */
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #fff;
-  padding: 14px 26px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.btn-secondary {
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* ===============================
-   SECTIONS / CARDS
-================================ */
-section {
-  background: rgba(255,255,255,0.95);
-  border-radius: 16px;
-  margin: 40px auto;
-  padding: 60px 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-/* ===============================
-   SERVICES
-================================ */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.service-card {
-  text-align: center;
-}
-
-.service-card img {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
-
-/* ===============================
-   WHATSAPP FIXO
-================================ */
-.whatsapp-fixo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: #fff;
-  font-size: 28px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  text-decoration: none;
-  z-index: 9999;
-  transition: 0.3s;
-}
-
-.whatsapp-fixo:hover {
-  transform: scale(1.1);
-}
-
-/* ===============================
-   RESPONSIVO
-================================ */
-@media (max-width: 900px) {
-
-  body {
-    margin-left: 0;
-  }
-
-  body::before {
-    display: none;
-  }
-
-  .brand-main {
-    font-size: 1.8rem;
-  }
-
-  .btn-header {
-    display: none;
-  }
-}
-/* =============================
-   DIAGRAMAÇÃO DO LADO DIREITO
-   (conteúdo principal ajustado)
-   ============================= */
-
-.main-content {
-  padding: 30px 40px;
-  margin-bottom: 60px;
-}
-
-/* Diminuir a largura total para melhor leitura */
-.main-content section {
-  max-width: 900px;
-  margin: 40px auto;
-}
-
-/* Estilo geral para títulos de seção */
-.main-content h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--dark);
-}
-
-/* Texto do parágrafo */
-.main-content p {
-  font-size: 1.05rem;
-  color: var(--gray);
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-/* =============================
-   LOCALIZAÇÃO / MAPA
-   ============================= */
-.location-section {
-  background: #fff;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
-}
-
-/* Mapa responsivo */
-.location-section iframe {
-  width: 100%;
-  height: 340px;
-  border: none;
-  border-radius: 12px;
-  margin-top: 15px;
-}
-
-/* =============================
-   BOTÕES NA SEÇÃO
-   ============================= */
-.main-content .btn-primary,
-.main-content .btn-secondary {
-  width: fit-content;
-  display: block;
-  margin-top: 20px;
-}
-
-/* =============================
-   RESPONSIVO (AJUSTES)
-   ============================= */
-@media (max-width: 1024px) {
-  body {
-    margin-left: 0;
-  }
-
-  body::before {
-    display: none;
-  }
-
-  .main-content {
-    padding: 20px 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .main-content section {
-    max-width: 100%;
-  }
-}
-/* ===============================
-   LADO DIREITO – DIAGRAMAÇÃO LIMPA
-   =============================== */
-
-/* Conteúdo principal */
-.main-content {
-  margin-left: 35%;
-  padding: 50px 40px;
-  background: #ffffff;
-  box-sizing: border-box;
-}
-
-/* Containers padrão */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-/* Seções bem separadas */
-section {
-  margin-bottom: 60px;
-}
-
-/* Títulos organizados */
-h1, h2, h3 {
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-
-/* Texto legível */
-p {
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-/* ===============================
-   MAPA DE LOCALIZAÇÃO (SEM QUEBRAR)
-   =============================== */
-
-.location iframe {
-  width: 100%;
-  height: 320px;
-  border: 0;
-  border-radius: 14px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-}
-
-/* Caixa da localização */
-.location {
-  background: #f8f9fb;
-  padding: 30px;
-  border-radius: 16px;
-}
-
-/* ===============================
-   FOOTER ORGANIZADO
-   =============================== */
-
-.footer {
-  background: #0f172a;
-  color: #ffffff;
-  padding: 40px 20px;
-  border-radius: 16px;
-}
-
-.footer p {
-  margin: 8px 0;
-}
-
-/* ===============================
-   MOBILE – AJUSTE AUTOMÁTICO
-   =============================== */
-
-/* ===============================
-   ESTRUTURA GLOBAL
-   =============================== */
-
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 
 /* ===============================
-   FUNDO ESQUERDO (IMAGEM)
-   =============================== */
-
+   LADO ESQUERDO (A FOTO FIXA)
+================================ */
 .left-bg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 32%;
+  width: var(--largura-esquerda);
   height: 100vh;
-  background: url("../images/kubo7.jpg") center / cover no-repeat;
-  z-index: -1;
+  background: url("./assets/images/kubo7.jpg") center center / cover no-repeat;
+  z-index: 10;
 }
 
 /* ===============================
-   LADO DIREITO – OCUPA TUDO
-   =============================== */
-
-.main-content {
-  margin-left: 32%;
-  width: 68%;
-  padding: 50px 60px;
-  box-sizing: border-box;
-  background: #ffffff;
+   LADO DIREITO (O CONTEÚDO)
+================================ */
+.main-content, .header, .footer {
+  margin-left: var(--largura-esquerda); /* Empurra tudo para a direita da foto */
+  width: calc(100% - var(--largura-esquerda)); /* Ocupa o restante exato da tela */
 }
 
-/* REMOVE LIMITAÇÃO DE LARGURA */
-.main-content .container {
-  max-width: 100%;
+/* Ajuste de espaçamento interno para não colar nas bordas */
+.container {
+  padding: 0 5%; 
   width: 100%;
-  margin: 0;
-  padding: 0;
+  max-width: 1000px; /* Limita um pouco para não ficar largo demais em telas gigantes */
+  margin: 0; /* Remove o margin auto que causava a faixa branca */
 }
 
 /* ===============================
-   SEÇÕES BEM ORGANIZADAS
-   =============================== */
-
+   SEÇÕES E MAPA
+================================ */
 section {
-  margin-bottom: 60px;
+  padding: 60px 0;
+  border-bottom: 1px solid #eee;
 }
 
-h1, h2, h3 {
-  margin-bottom: 20px;
-  line-height: 1.3;
+.hero {
+  background: var(--light);
+  padding: 100px 5%;
 }
 
-p {
-  line-height: 1.6;
+/* Grid de Serviços */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
-/* ===============================
-   MAPA PERFEITO (SEM SOBRAR ESPAÇO)
-   =============================== */
-
-.location {
-  background: #f8f9fb;
-  padding: 30px;
-  border-radius: 18px;
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
 }
 
-.location iframe {
+.service-card img {
   width: 100%;
-  height: 320px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* LOCALIZAÇÃO E MAPA */
+.location-section {
+  background: #fff;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.location-section iframe {
+  width: 100%;
+  height: 400px;
   border: none;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* ===============================
-   FOOTER ALINHADO
-   =============================== */
+   HEADER E BOTÕES
+================================ */
+.header {
+  background: #0a2a5e;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-.footer {
-  background: #0f172a;
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-main { font-size: 1.8rem; color: #fff; font-weight: 800; }
+.brand-sub { color: #c7d7ff; display: block; font-size: 0.9rem; }
+
+.btn-header {
+  background: #25d366;
   color: #fff;
-  padding: 40px;
-  border-radius: 18px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
 /* ===============================
-   MOBILE
-   =============================== */
-
+   RESPONSIVO (CELULAR)
+================================ */
 @media (max-width: 900px) {
-
   .left-bg {
-    display: none;
+    display: none; /* Esconde a foto na esquerda no celular */
   }
 
-  .main-content {
+  .main-content, .header, .footer {
     margin-left: 0;
     width: 100%;
-    padding: 30px 20px;
+  }
+  
+  .container {
+    padding: 0 20px;
   }
 }
-
