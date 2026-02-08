@@ -167,6 +167,29 @@
 
   <!-- JS -->
   <script src="./assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: { slidesPerView: 1 },
+      1024: { slidesPerView: 2 },
+    }
+  });
+</script>
 </body>
 </html>
