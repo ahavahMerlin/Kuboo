@@ -198,4 +198,82 @@ header img,
   }
 }
 
-  
+  /* =========================
+   HEADER PREMIUM
+========================= */
+.header-premium {
+  background: linear-gradient(90deg, #0a2a5e, #143c8a);
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* MARCA */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  max-height: 70px;
+}
+
+/* TEXTO DA MARCA */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-main {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.brand-sub {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c7d7ff;
+}
+
+/* BOTÃO HEADER */
+.btn-header {
+  background: #25d366;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-header:hover {
+  background: #1ebe5d;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .brand-main {
+    font-size: 1.9rem;
+  }
+
+  .logo {
+    max-height: 55px;
+  }
+
+  .btn-header {
+    display: none;
+  }
+}
+
