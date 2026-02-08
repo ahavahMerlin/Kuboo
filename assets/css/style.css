@@ -299,4 +299,12 @@ header img,
 .whatsapp-fixo:hover {
   transform: scale(1.1);
 }
+/* BACKGROUND GERAL DO SITE */
+body {
+  background-image: url("../images/imagem7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
