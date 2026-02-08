@@ -299,4 +299,22 @@ header img,
 .whatsapp-fixo:hover {
   transform: scale(1.1);
 }
+/* IMAGEM FIXA NO LADO ESQUERDO */
+.left-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100vh;
+  background-image: url("../images/kubo7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* EMPURRA O SITE PARA A DIREITA */
+body {
+  margin-left: 35%;
+}
 
