@@ -171,3 +171,40 @@ section {
     padding: 0 20px;
   }
 }
+/* ===============================
+   ESTILO DO CARROSSEL
+================================ */
+.fotos-galeria {
+  padding: 40px 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 400px; /* Altura fixa para as fotos */
+  object-fit: cover; /* Faz a foto preencher o espaço sem distorcer */
+  border-radius: 16px;
+}
+
+/* Ajustando as cores das setas para o azul da Kuboo */
+.swiper-button-next, .swiper-button-prev {
+  color: var(--primary) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary) !important;
+}
