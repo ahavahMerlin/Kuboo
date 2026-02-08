@@ -301,7 +301,7 @@ header img,
 }
 /* BACKGROUND GERAL DO SITE */
 body {
-  background-image: url("../images/kubo7.jpg");
+  background-image: url("./images/kubo7.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
