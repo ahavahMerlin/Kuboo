@@ -276,4 +276,27 @@ header img,
     display: none;
   }
 }
+/* WHATSAPP FIXO */
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-decoration: none;
+  z-index: 9999;
+  transition: 0.3s;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+}
 
