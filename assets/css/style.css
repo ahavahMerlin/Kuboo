@@ -25,13 +25,16 @@ html, body {
   min-height: 100%;
 }
 
+/* FUNDO GLOBAL TRANSPARENTE */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: url("../images/kubo7.jpg") center / cover no-repeat;
+  opacity: 0.15; /* 🔥 AJUSTE AQUI: 0.08 a 0.25 */
   z-index: -1;
 }
+
 
 /* =========================
    TEXTO GLOBAL
