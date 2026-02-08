@@ -252,3 +252,88 @@ section {
     display: none;
   }
 }
+/* =============================
+   DIAGRAMAÇÃO DO LADO DIREITO
+   (conteúdo principal ajustado)
+   ============================= */
+
+.main-content {
+  padding: 30px 40px;
+  margin-bottom: 60px;
+}
+
+/* Diminuir a largura total para melhor leitura */
+.main-content section {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* Estilo geral para títulos de seção */
+.main-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+
+/* Texto do parágrafo */
+.main-content p {
+  font-size: 1.05rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* =============================
+   LOCALIZAÇÃO / MAPA
+   ============================= */
+.location-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+/* Mapa responsivo */
+.location-section iframe {
+  width: 100%;
+  height: 340px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+/* =============================
+   BOTÕES NA SEÇÃO
+   ============================= */
+.main-content .btn-primary,
+.main-content .btn-secondary {
+  width: fit-content;
+  display: block;
+  margin-top: 20px;
+}
+
+/* =============================
+   RESPONSIVO (AJUSTES)
+   ============================= */
+@media (max-width: 1024px) {
+  body {
+    margin-left: 0;
+  }
+
+  body::before {
+    display: none;
+  }
+
+  .main-content {
+    padding: 20px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content section {
+    max-width: 100%;
+  }
+}
+
