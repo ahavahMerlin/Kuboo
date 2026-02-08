@@ -315,3 +315,22 @@ body {
   background: url("../images/kubo7.jpg") center / cover no-repeat;
 }
 
+/* FUNDO GLOBAL */
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: url("../images/kubo7.jpg") center / cover no-repeat fixed;
+}
+
+/* CONTEÚDO EM CARD PREMIUM */
+.container,
+.section,
+section {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
