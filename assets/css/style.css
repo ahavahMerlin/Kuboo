@@ -334,3 +334,11 @@ section {
   padding: 40px 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
+/* FORÇA FUNDO NO VIEWPORT */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../images/kubo7.jpg") center / cover no-repeat;
+  z-index: -1;
+}
